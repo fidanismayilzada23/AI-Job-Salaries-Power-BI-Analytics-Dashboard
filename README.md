@@ -3,15 +3,6 @@ AI Job Salaries — Power BI Analytics Dashboard
 This project presents an interactive Power BI dashboard that analyzes salary trends across the Artificial Intelligence job market. It aims to reveal insights related to average, minimum, maximum, and median salary levels based on job role, country, company size, education level, and experience seniority.
 Additionally, month-over-month salary growth metrics are implemented using advanced DAX calculations.
 
-Key Findings from the Dashboard
-	    KPI		           Value
-⦁	Total Salary		      2 bn
-⦁	Maximum Salary	      410K
-⦁	Minimum Salary	      17K
-⦁	Average Salary	      121.99K
-⦁	Median Salary	        107.26K
-⦁	MoY Salary Growth 	  -0.02
-
 Visuals in the dashboard highlight the following insights:
 
 ⦁	Highest-paid roles include Head of AI, Machine Learning Engineer, Research Scientist, Principal Data Scientist
