@@ -1,0 +1,57 @@
+1.Average Salary = AVERAGE(ai_job_dataset1[salary_usd])
+
+2. Average Salary by Company Size = AVERAGEX(VALUES(ai_job_dataset1[company_size]),CALCULATE([Average Salary]))
+
+3. Average Salary Remorte = CALCULATE([Average Salary],ai_job_dataset1[remote_ratio]=100)
+
+4. Count of job Posting = COUNTROWS(ai_job_dataset1)
+
+5. Employmet Type Cost Ratio = DIVIDE([Average Salary],CALCULATE([Average Salary], ALL(ai_job_dataset1[employment_type])))
+
+6. High salary Rate by Company =AVERAGEX(VALUES(ai_job_dataset1[company_name]),CALCULATE(AVERAGE(ai_job_dataset1[High salary flag])))
+
+7. Madian Salary = MEDIAN(ai_job_dataset1[salary_usd])
+
+8. Max Salary = max(ai_job_dataset1[salary_usd])
+
+9. Min Salary = min(ai_job_dataset1[salary_usd])
+
+10. MoY Salary Growth = 
+VAR CurrentMonth =
+    MONTH ( MAX ( ai_job_dataset1[posting_date] ) )
+VAR CurrentYear =
+    YEAR ( MAX ( ai_job_dataset1[posting_date] ) )
+VAR CurrentMonthSalary =
+    CALCULATE (
+        [Total Salary],
+        FILTER (
+            ALL ( ai_job_dataset1 ),
+            MONTH ( ai_job_dataset1[posting_date] ) = CurrentMonth
+                && YEAR ( ai_job_dataset1[posting_date] ) = CurrentYear
+        )
+    )
+VAR PrevMonth =
+    IF ( CurrentMonth = 1, 12, CurrentMonth - 1 )
+VAR PrevYear =
+    IF ( CurrentMonth = 1, CurrentYear - 1, CurrentYear )
+VAR PrevMonthSalary =
+    CALCULATE (
+        [Total Salary],
+        FILTER (
+            ALL ( ai_job_dataset1 ),
+            MONTH ( ai_job_dataset1[posting_date] ) = PrevMonth
+                && YEAR ( ai_job_dataset1[posting_date] ) = PrevYear
+        )
+    )
+RETURN
+IF (
+    ISBLANK ( PrevMonthSalary ) || PrevMonthSalary = 0,
+    0,   
+    DIVIDE ( CurrentMonthSalary - PrevMonthSalary, PrevMonthSalary )
+)
+
+
+11. Skill salary Score = CALCULATE([Average Salary],ALLEXCEPT(ai_job_dataset1,ai_job_dataset1[required_skills]))
+
+12. Top Paid Role = CALCULATE([Max Salary], ALLEXCEPT(ai_job_dataset1,ai_job_dataset1[job_title]))
+
