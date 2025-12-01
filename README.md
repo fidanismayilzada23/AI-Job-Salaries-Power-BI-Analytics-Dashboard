@@ -49,7 +49,7 @@ Average Salary = AVERAGE(ai_job_dataset1[salary_usd])
 Median Salary  = MEDIAN(ai_job_dataset1[salary_usd])
 Max Salary     = MAX(ai_job_dataset1[salary_usd])
 Min Salary     = MIN(ai_job_dataset1[salary_usd])
-
+```
 ## 📂 Repository Structure
 ```
 AI-Salary-PowerBI-Dashboard
