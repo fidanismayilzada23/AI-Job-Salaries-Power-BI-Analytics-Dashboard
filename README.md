@@ -49,3 +49,23 @@ Average Salary = AVERAGE(ai_job_dataset1[salary_usd])
 Median Salary  = MEDIAN(ai_job_dataset1[salary_usd])
 Max Salary     = MAX(ai_job_dataset1[salary_usd])
 Min Salary     = MIN(ai_job_dataset1[salary_usd])
+
+## 📂 Repository Structure
+```
+AI-Salary-PowerBI-Dashboard
+│── dashboards
+│── dataset
+│── exports
+│── dax_measures.txt
+```
+## 🚀 Use Cases
+This dashboard can be used for:
+- AI job market salary research
+- HR & recruitment compensation strategy
+- Salary benchmarking by country and job title
+- Career planning and skill-gap analysis
+- Education-based salary comparison for workforce planning
+## 👤 Author
+**Fidan Ismayilzada**  
+Data Analyst  
+🔗 LinkedIn: https://linkedin.com/in/fidan-ismayilzada-529104193
