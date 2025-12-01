@@ -1,78 +1,51 @@
-AI Job Salaries — Power BI Analytics Dashboard
+# AI Job Salaries — Power BI Analytics Dashboard
 
-This project presents an interactive Power BI dashboard that analyzes salary trends across the Artificial Intelligence job market. It aims to reveal insights related to average, minimum, maximum, and median salary levels based on job role, country, company size, education level, and experience seniority.
-Additionally, month-over-month salary growth metrics are implemented using advanced DAX calculations.
+This repository contains an **interactive Power BI dashboard** that analyzes salary trends across the Artificial Intelligence job market.  
+The dashboard explores **average, minimum, maximum, and median salary levels** based on job role, country, company size, education level, and experience seniority.  
+In addition, **month-over-month salary growth metrics** have been implemented using advanced DAX calculations to identify salary fluctuations over time.
 
-Visuals in the dashboard highlight the following insights:
+---
 
-⦁	Highest-paid roles include Head of AI, Machine Learning Engineer, Research Scientist, Principal Data Scientist
+## 📌 Dashboard Insights
 
-⦁	PhD and Master’s degree holders earn higher salaries compared to Bachelor’s degree holders
+The visuals within the dashboard highlight the following key observations:
 
-⦁	Expert-level experience (EX) is associated with the highest salary band
+- Highest-paid roles include **Head of AI, Machine Learning Engineer, Research Scientist, Principal Data Scientist**
+- **PhD and Master’s degree holders** earn higher salaries compared to Bachelor’s degree holders
+- **Expert-level experience (EX)** corresponds to the highest salary range
+- **Salary variation across countries** shows the highest compensation in **North America and Northern Europe**
+- **Yearly and monthly salary dynamics** indicate **periodic increases and seasonal declines**
 
-⦁	Salary variation across countries shows highest figures in North America and Northern Europe
+---
 
-⦁	Yearly and monthly salary dynamics indicate periodic increases and seasonal drops
+## 📊 Core Analytical Visuals
 
-Core Analytical Visuals
-1. Salary by Job Title (Avg / Min / Max)
+### 1️⃣ Salary by Job Title (Avg / Min / Max)
+Clear comparison of salary distributions across AI-related roles.
 
-	-Clear comparison of salary distributions across AI roles
+### 2️⃣ Salary by Experience Level
+EX → SE → MI → EN salary progression pattern.
 
-2.Salary by Experience Level
+### 3️⃣ Salary by Education Level
+PhD and Master’s degrees correlate with the highest compensation.
 
-	-EX > SE > MI > EN salary progression pattern
+### 4️⃣ Salary by Company Location
+Comparison of average, max, and min salary across countries.
 
-3.Salary by Education Level
+### 5️⃣ Monthly & Yearly Total Salary Trend
+Visualizes salary market fluctuations across **2024–2025**.
 
-	-PhD and Master’s degrees correlate with the highest compensation
+---
 
-4.Salary by Company Location
+## 🧮 DAX Measures Used in the Project
 
-	-Comparison of average, max, and min salary across countries
+A full list of all **12 DAX measures** used in the dashboard is stored in the following file:
 
-5.Monthly & Yearly Total Salary Trend
+📄 `dax_measures.txt`
 
-	-Shows salary market fluctuation across 2024–2025
-
-DAX Measures Used in the Project
-
-A full list of all 12 DAX measures used in the dashboard is available in the file below:
-	DAX_Measures.txt 
-
-Examples:
-
-⦁	Average Salary = AVERAGE(ai_job_dataset1[salary_usd])
-⦁	Median Salary = MEDIAN(ai_job_dataset1[salary_usd])
-⦁	Max Salary = MAX(ai_job_dataset1[salary_usd])
-⦁	Min Salary = MIN(ai_job_dataset1[salary_usd])
-
-
-The key analytical metric:
-
-MoY Salary Growth
--- Calculates month-over-month salary change in percentage by comparing
--- current month total salary against previous month total salary
-
-📁 Repository Structure
-AI-Salary-PowerBI-Dashboard
-│── dashboards
-│── dataset
-│── exports
-│── dax_measures.txt
-
-
-This dashboard can be used for:
-
-⦁	AI job market salary research
-⦁	HR & recruitment compensation strategy
-⦁	Salary benchmarking by country and job title
-⦁	Career planning and skill-gap analysis
-⦁	Education-based salary comparison for workforce planning
-
-Author
-
-Fidan Ismayilzada
-Data Analyst
-🔗 LinkedIn: linkedin.com/in/fidan-ismayilzada-529104193
+### Examples:
+```DAX
+Average Salary = AVERAGE(ai_job_dataset1[salary_usd])
+Median Salary  = MEDIAN(ai_job_dataset1[salary_usd])
+Max Salary     = MAX(ai_job_dataset1[salary_usd])
+Min Salary     = MIN(ai_job_dataset1[salary_usd])
